@@ -28,7 +28,7 @@ const Services = () => {
       icon: <Clock className="w-12 h-12" />,
       title: 'Wellness Monitoring',
       description: 'Regular health tracking with quarterly testing packages for ongoing care.',
-      image: 'https://images.pexels.com/photos/4269985/pexels-photo-4269985.jpeg?auto=compress&cs=tinysrgb&w=300&h=200&fit=crop',
+      image: 'https://images.pexels.com/photos/6235657/pexels-photo-6235657.jpeg?auto=compress&cs=tinysrgb&w=300&h=200&fit=crop',
       price: 'From $199'
     },
     {
