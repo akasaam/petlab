@@ -5,6 +5,21 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 gsap.registerPlugin(ScrollTrigger);
 
 export const initializeAnimations = () => {
+  // Set initial states for animated elements
+  gsap.set([
+    '.hero-title', '.hero-subtitle', '.hero-button', '.hero-illustration', '.trust-indicators',
+    '.services-title', '.services-subtitle', '.service-card', '.services-cta',
+    '.section-title', '.feature-card',
+    '.testimonials-title', '.testimonials-subtitle', '.testimonial-card', '.testimonials-stats',
+    '.process-title', '.process-subtitle', '.process-step', '.process-benefits',
+    '.about-title', '.about-text', '.about-stats', '.about-illustration',
+    '.pricing-title', '.pricing-subtitle', '.pricing-toggle', '.pricing-card', '.pricing-guarantee',
+    '.faq-title', '.faq-subtitle', '.faq-image', '.faq-item',
+    '.booking-title',
+    '.blog-title', '.blog-subtitle', '.blog-card', '.blog-cta',
+    '.cta-title', '.cta-subtitle', '.cta-button'
+  ], { opacity: 0 });
+
   // Hero section animations - fade in on page load
   const heroTl = gsap.timeline({ delay: 0.5 });
   
@@ -41,192 +56,170 @@ export const initializeAnimations = () => {
     }, '-=0.3');
 
   // Services section animations
-  gsap.from('.services-title', {
-    y: 50,
-    opacity: 0,
-    duration: 1,
+  gsap.to('.services-title', {
+    y: 0,
+    opacity: 1,
+    duration: 1.2,
     scrollTrigger: {
       trigger: '.services-title',
       start: 'top 80%',
-      end: 'bottom 60%',
-      scrub: 1,
       toggleActions: 'play none none none'
     }
   });
 
-  gsap.from('.services-subtitle', {
-    y: 30,
-    opacity: 0,
+  gsap.to('.services-subtitle', {
+    y: 0,
+    opacity: 1,
     duration: 1,
+    delay: 0.2,
     scrollTrigger: {
       trigger: '.services-subtitle',
       start: 'top 80%',
-      end: 'bottom 60%',
-      scrub: 1,
       toggleActions: 'play none none none'
     }
   });
 
-  gsap.from('.service-card', {
-    y: 80,
-    opacity: 0,
+  gsap.to('.service-card', {
+    y: 0,
+    opacity: 1,
     duration: 1,
     stagger: 0.2,
     scrollTrigger: {
       trigger: '.services-section',
       start: 'top 70%',
-      end: 'bottom 60%',
-      scrub: 0.5,
       toggleActions: 'play none none none'
     }
   });
 
-  gsap.from('.services-cta', {
-    y: 30,
-    opacity: 0,
+  gsap.to('.services-cta', {
+    y: 0,
+    opacity: 1,
     duration: 1,
+    delay: 0.5,
     scrollTrigger: {
       trigger: '.services-cta',
       start: 'top 80%',
-      end: 'bottom 60%',
-      scrub: 1,
       toggleActions: 'play none none none'
     }
   });
 
   // Features section title animation
-  gsap.from('.section-title', {
-    y: 50,
-    opacity: 0,
-    duration: 1,
+  gsap.to('.section-title', {
+    y: 0,
+    opacity: 1,
+    duration: 1.2,
     scrollTrigger: {
       trigger: '.section-title',
       start: 'top 80%',
-      end: 'bottom 60%',
-      scrub: 1,
       toggleActions: 'play none none none'
     }
   });
 
   // Feature cards staggered animation
-  gsap.from('.feature-card', {
-    y: 80,
-    opacity: 0,
+  gsap.to('.feature-card', {
+    y: 0,
+    opacity: 1,
     duration: 1,
     stagger: 0.3,
     scrollTrigger: {
       trigger: '.features-section',
       start: 'top 70%',
-      end: 'bottom 60%',
-      scrub: 0.5,
       toggleActions: 'play none none none'
     }
   });
 
   // Testimonials section animations
-  gsap.from('.testimonials-title', {
-    y: 50,
-    opacity: 0,
-    duration: 1,
+  gsap.to('.testimonials-title', {
+    y: 0,
+    opacity: 1,
+    duration: 1.2,
     scrollTrigger: {
       trigger: '.testimonials-title',
       start: 'top 80%',
-      end: 'bottom 60%',
-      scrub: 1,
       toggleActions: 'play none none none'
     }
   });
 
-  gsap.from('.testimonials-subtitle', {
-    y: 30,
-    opacity: 0,
+  gsap.to('.testimonials-subtitle', {
+    y: 0,
+    opacity: 1,
     duration: 1,
+    delay: 0.2,
     scrollTrigger: {
       trigger: '.testimonials-subtitle',
       start: 'top 80%',
-      end: 'bottom 60%',
-      scrub: 1,
       toggleActions: 'play none none none'
     }
   });
 
-  gsap.from('.testimonial-card', {
-    y: 60,
-    opacity: 0,
+  gsap.to('.testimonial-card', {
+    y: 0,
+    opacity: 1,
     duration: 1,
     stagger: 0.3,
     scrollTrigger: {
       trigger: '.testimonials-section',
       start: 'top 70%',
-      end: 'bottom 60%',
-      scrub: 0.5,
       toggleActions: 'play none none none'
     }
   });
 
-  gsap.from('.testimonials-stats', {
-    y: 40,
-    opacity: 0,
+  gsap.to('.testimonials-stats', {
+    y: 0,
+    opacity: 1,
     duration: 1,
+    delay: 0.4,
     scrollTrigger: {
       trigger: '.testimonials-stats',
       start: 'top 80%',
-      end: 'bottom 60%',
-      scrub: 1,
       toggleActions: 'play none none none'
     }
   });
 
   // Process section animations
-  gsap.from('.process-title', {
-    y: 50,
-    opacity: 0,
-    duration: 1,
+  gsap.to('.process-title', {
+    y: 0,
+    opacity: 1,
+    duration: 1.2,
     scrollTrigger: {
       trigger: '.process-title',
       start: 'top 80%',
-      end: 'bottom 60%',
-      scrub: 1,
       toggleActions: 'play none none none'
     }
   });
 
-  gsap.from('.process-subtitle', {
-    y: 30,
-    opacity: 0,
+  gsap.to('.process-subtitle', {
+    y: 0,
+    opacity: 1,
     duration: 1,
+    delay: 0.2,
     scrollTrigger: {
       trigger: '.process-subtitle',
       start: 'top 80%',
-      end: 'bottom 60%',
-      scrub: 1,
       toggleActions: 'play none none none'
     }
   });
 
-  gsap.from('.process-step', {
-    y: 60,
-    opacity: 0,
+  gsap.to('.process-step', {
+    y: 0,
+    opacity: 1,
     duration: 1,
     stagger: 0.2,
     scrollTrigger: {
       trigger: '.process-section',
       start: 'top 70%',
-      end: 'bottom 60%',
-      scrub: 0.5,
       toggleActions: 'play none none none'
     }
   });
 
-  gsap.from('.process-benefits', {
-    y: 40,
-    opacity: 0,
+  gsap.to('.process-benefits', {
+    y: 0,
+    opacity: 1,
     duration: 1,
+    delay: 0.5,
     scrollTrigger: {
       trigger: '.process-benefits',
       start: 'top 80%',
-      end: 'bottom 60%',
-      scrub: 1,
       toggleActions: 'play none none none'
     }
   });
@@ -238,293 +231,260 @@ export const initializeAnimations = () => {
     scrollTrigger: {
       trigger: '.process-section',
       start: 'top 60%',
-      end: 'bottom 40%',
-      scrub: 1,
       toggleActions: 'play none none none'
     }
   });
 
   // Pricing section animations
-  gsap.from('.pricing-title', {
-    y: 50,
-    opacity: 0,
-    duration: 1,
+  gsap.to('.pricing-title', {
+    y: 0,
+    opacity: 1,
+    duration: 1.2,
     scrollTrigger: {
       trigger: '.pricing-title',
       start: 'top 80%',
-      end: 'bottom 60%',
-      scrub: 1,
       toggleActions: 'play none none none'
     }
   });
 
-  gsap.from('.pricing-subtitle', {
-    y: 30,
-    opacity: 0,
+  gsap.to('.pricing-subtitle', {
+    y: 0,
+    opacity: 1,
     duration: 1,
+    delay: 0.2,
     scrollTrigger: {
       trigger: '.pricing-subtitle',
       start: 'top 80%',
-      end: 'bottom 60%',
-      scrub: 1,
       toggleActions: 'play none none none'
     }
   });
 
-  gsap.from('.pricing-toggle', {
-    y: 20,
-    opacity: 0,
+  gsap.to('.pricing-toggle', {
+    y: 0,
+    opacity: 1,
     duration: 1,
+    delay: 0.3,
     scrollTrigger: {
       trigger: '.pricing-toggle',
       start: 'top 80%',
-      end: 'bottom 60%',
-      scrub: 1,
       toggleActions: 'play none none none'
     }
   });
 
-  gsap.from('.pricing-card', {
-    y: 80,
-    opacity: 0,
+  gsap.to('.pricing-card', {
+    y: 0,
+    opacity: 1,
     duration: 1,
     stagger: 0.2,
     scrollTrigger: {
       trigger: '.pricing-section',
       start: 'top 70%',
-      end: 'bottom 60%',
-      scrub: 0.5,
       toggleActions: 'play none none none'
     }
   });
 
-  gsap.from('.pricing-guarantee', {
-    y: 40,
-    opacity: 0,
+  gsap.to('.pricing-guarantee', {
+    y: 0,
+    opacity: 1,
     duration: 1,
+    delay: 0.5,
     scrollTrigger: {
       trigger: '.pricing-guarantee',
       start: 'top 80%',
-      end: 'bottom 60%',
-      scrub: 1,
       toggleActions: 'play none none none'
     }
   });
 
   // FAQ section animations
-  gsap.from('.faq-title', {
-    y: 50,
-    opacity: 0,
-    duration: 1,
+  gsap.to('.faq-title', {
+    y: 0,
+    opacity: 1,
+    duration: 1.2,
     scrollTrigger: {
       trigger: '.faq-title',
       start: 'top 80%',
-      end: 'bottom 60%',
-      scrub: 1,
       toggleActions: 'play none none none'
     }
   });
 
-  gsap.from('.faq-subtitle', {
-    y: 30,
-    opacity: 0,
+  gsap.to('.faq-subtitle', {
+    y: 0,
+    opacity: 1,
     duration: 1,
+    delay: 0.2,
     scrollTrigger: {
       trigger: '.faq-subtitle',
       start: 'top 80%',
-      end: 'bottom 60%',
-      scrub: 1,
       toggleActions: 'play none none none'
     }
   });
 
-  gsap.from('.faq-image', {
-    x: -50,
-    opacity: 0,
+  gsap.to('.faq-image', {
+    x: 0,
+    opacity: 1,
     duration: 1,
+    delay: 0.3,
     scrollTrigger: {
       trigger: '.faq-image',
       start: 'top 80%',
-      end: 'bottom 60%',
-      scrub: 1,
       toggleActions: 'play none none none'
     }
   });
 
-  gsap.from('.faq-item', {
-    x: 50,
-    opacity: 0,
+  gsap.to('.faq-item', {
+    x: 0,
+    opacity: 1,
     duration: 1,
     stagger: 0.1,
     scrollTrigger: {
       trigger: '.faq-section',
       start: 'top 70%',
-      end: 'bottom 60%',
-      scrub: 0.5,
       toggleActions: 'play none none none'
     }
   });
 
   // Booking section animations
-  gsap.from('.booking-title', {
-    y: 50,
-    opacity: 0,
-    duration: 1,
+  gsap.to('.booking-title', {
+    y: 0,
+    opacity: 1,
+    duration: 1.2,
     scrollTrigger: {
       trigger: '.booking-title',
       start: 'top 80%',
-      end: 'bottom 60%',
-      scrub: 1,
       toggleActions: 'play none none none'
     }
   });
 
   // Blog section animations
-  gsap.from('.blog-title', {
-    y: 50,
-    opacity: 0,
-    duration: 1,
+  gsap.to('.blog-title', {
+    y: 0,
+    opacity: 1,
+    duration: 1.2,
     scrollTrigger: {
       trigger: '.blog-title',
       start: 'top 80%',
-      end: 'bottom 60%',
-      scrub: 1,
       toggleActions: 'play none none none'
     }
   });
 
-  gsap.from('.blog-subtitle', {
-    y: 30,
-    opacity: 0,
+  gsap.to('.blog-subtitle', {
+    y: 0,
+    opacity: 1,
     duration: 1,
+    delay: 0.2,
     scrollTrigger: {
       trigger: '.blog-subtitle',
       start: 'top 80%',
-      end: 'bottom 60%',
-      scrub: 1,
       toggleActions: 'play none none none'
     }
   });
 
-  gsap.from('.blog-card', {
-    y: 80,
-    opacity: 0,
+  gsap.to('.blog-card', {
+    y: 0,
+    opacity: 1,
     duration: 1,
     stagger: 0.2,
     scrollTrigger: {
       trigger: '.blog-section',
       start: 'top 70%',
-      end: 'bottom 60%',
-      scrub: 0.5,
       toggleActions: 'play none none none'
     }
   });
 
-  gsap.from('.blog-cta', {
-    y: 30,
-    opacity: 0,
+  gsap.to('.blog-cta', {
+    y: 0,
+    opacity: 1,
     duration: 1,
+    delay: 0.5,
     scrollTrigger: {
       trigger: '.blog-cta',
       start: 'top 80%',
-      end: 'bottom 60%',
-      scrub: 1,
       toggleActions: 'play none none none'
     }
   });
 
   // About section animations
-  gsap.from('.about-title', {
-    y: 60,
-    opacity: 0,
-    duration: 1,
+  gsap.to('.about-title', {
+    y: 0,
+    opacity: 1,
+    duration: 1.2,
     scrollTrigger: {
       trigger: '.about-title',
       start: 'top 80%',
-      end: 'bottom 60%',
-      scrub: 1,
       toggleActions: 'play none none none'
     }
   });
 
-  gsap.from('.about-text', {
-    y: 40,
-    opacity: 0,
+  gsap.to('.about-text', {
+    y: 0,
+    opacity: 1,
     duration: 1,
     stagger: 0.2,
     scrollTrigger: {
       trigger: '.about-section',
       start: 'top 70%',
-      end: 'bottom 60%',
-      scrub: 0.8,
       toggleActions: 'play none none none'
     }
   });
 
-  gsap.from('.about-stats', {
-    y: 40,
-    opacity: 0,
+  gsap.to('.about-stats', {
+    y: 0,
+    opacity: 1,
     duration: 1,
+    delay: 0.4,
     scrollTrigger: {
       trigger: '.about-stats',
       start: 'top 80%',
-      end: 'bottom 60%',
-      scrub: 1,
       toggleActions: 'play none none none'
     }
   });
 
   // About illustration zoom effect
-  gsap.from('.about-illustration', {
-    scale: 0.8,
-    opacity: 0,
-    duration: 1.5,
+  gsap.to('.about-illustration', {
+    scale: 1,
+    opacity: 1,
+    duration: 1.2,
+    delay: 0.3,
     scrollTrigger: {
       trigger: '.about-illustration',
       start: 'top 80%',
-      end: 'bottom 60%',
-      scrub: 1,
       toggleActions: 'play none none none'
     }
   });
 
   // CTA section animations
-  gsap.from('.cta-title', {
-    y: 50,
-    opacity: 0,
-    duration: 1,
+  gsap.to('.cta-title', {
+    y: 0,
+    opacity: 1,
+    duration: 1.2,
     scrollTrigger: {
       trigger: '.cta-section',
       start: 'top 80%',
-      end: 'bottom 60%',
-      scrub: 1,
       toggleActions: 'play none none none'
     }
   });
 
-  gsap.from('.cta-subtitle', {
-    y: 40,
-    opacity: 0,
+  gsap.to('.cta-subtitle', {
+    y: 0,
+    opacity: 1,
     duration: 1,
+    delay: 0.2,
     scrollTrigger: {
       trigger: '.cta-subtitle',
       start: 'top 80%',
-      end: 'bottom 60%',
-      scrub: 1,
       toggleActions: 'play none none none'
     }
   });
 
   // CTA button with pulse effect
-  gsap.from('.cta-button', {
-    y: 30,
-    opacity: 0,
+  gsap.to('.cta-button', {
+    y: 0,
+    opacity: 1,
     duration: 1,
+    delay: 0.4,
     scrollTrigger: {
       trigger: '.cta-button',
       start: 'top 80%',
-      end: 'bottom 60%',
-      scrub: 1,
       toggleActions: 'play none none none'
     }
   });

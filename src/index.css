@@ -68,15 +68,10 @@ body {
 }
 
 /* Custom animations and transitions */
-.hero-title {
-  transform: translateY(30px);
-}
-
-.hero-subtitle {
-  transform: translateY(30px);
-}
-
-.hero-button {
+.hero-title,
+.hero-subtitle,
+.hero-button,
+.trust-indicators {
   transform: translateY(30px);
 }
 
@@ -84,8 +79,49 @@ body {
   transform: scale(0.8);
 }
 
-.trust-indicators {
-  transform: translateY(30px);
+/* Ensure sections have proper initial visibility */
+section {
+  min-height: auto;
+  position: relative;
+}
+
+/* Animation classes for GSAP */
+.services-title,
+.services-subtitle,
+.service-card,
+.services-cta,
+.section-title,
+.feature-card,
+.testimonials-title,
+.testimonials-subtitle,
+.testimonial-card,
+.testimonials-stats,
+.process-title,
+.process-subtitle,
+.process-step,
+.process-benefits,
+.about-title,
+.about-text,
+.about-stats,
+.about-illustration,
+.pricing-title,
+.pricing-subtitle,
+.pricing-toggle,
+.pricing-card,
+.pricing-guarantee,
+.faq-title,
+.faq-subtitle,
+.faq-image,
+.faq-item,
+.booking-title,
+.blog-title,
+.blog-subtitle,
+.blog-card,
+.blog-cta,
+.cta-title,
+.cta-subtitle,
+.cta-button {
+  transform: translateY(20px);
 }
 
 /* Button hover effects */
