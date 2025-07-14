@@ -1,0 +1,202 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bungee&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --brand-yellow: #FFD400;
+  --brand-black: #000000;
+  --brand-grey: #6B7280;
+  --brand-light-grey: #F3F4F6;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Rubik', sans-serif;
+  line-height: 1.6;
+  color: var(--brand-black);
+  scroll-behavior: smooth;
+}
+
+/* Bungee font for highlights */
+.font-bungee {
+  font-family: 'Bungee', cursive;
+}
+
+.highlight-text {
+  font-family: 'Bungee', cursive;
+  letter-spacing: 0.05em;
+}
+
+/* Custom utility classes */
+.brand-yellow {
+  color: var(--brand-yellow);
+}
+
+.brand-black {
+  color: var(--brand-black);
+}
+
+.bg-brand-yellow {
+  background-color: var(--brand-yellow);
+}
+
+.bg-brand-black {
+  background-color: var(--brand-black);
+}
+
+.text-brand-yellow {
+  color: var(--brand-yellow);
+}
+
+.text-brand-black {
+  color: var(--brand-black);
+}
+
+.border-brand-yellow {
+  border-color: var(--brand-yellow);
+}
+
+.border-brand-black {
+  border-color: var(--brand-black);
+}
+
+/* Custom animations and transitions */
+.hero-title {
+  transform: translateY(30px);
+}
+
+.hero-subtitle {
+  transform: translateY(30px);
+}
+
+.hero-button {
+  transform: translateY(30px);
+}
+
+.hero-illustration {
+  transform: scale(0.8);
+}
+
+.trust-indicators {
+  transform: translateY(30px);
+}
+
+/* Button hover effects */
+.hero-button:hover {
+  box-shadow: 0 8px 25px rgba(255, 212, 0, 0.4);
+}
+
+.cta-button:hover {
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+/* Navigation link hover effects */
+.nav-link {
+  position: relative;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--brand-yellow);
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+/* Feature cards hover effects */
+.feature-card:hover {
+  transform: translateY(-5px);
+  transition: transform 0.3s ease;
+}
+
+/* Service cards hover effects */
+.service-card:hover {
+  transform: translateY(-8px);
+  transition: transform 0.3s ease;
+}
+
+/* Testimonial cards hover effects */
+.testimonial-card:hover {
+  transform: translateY(-5px);
+  transition: transform 0.3s ease;
+}
+
+/* Blog cards hover effects */
+.blog-card:hover {
+  transform: translateY(-5px);
+  transition: transform 0.3s ease;
+}
+
+/* Line clamp utilities */
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.line-clamp-3 {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 2.5rem;
+  }
+  
+  .section-title {
+    font-size: 2rem;
+  }
+  
+  .feature-card {
+    margin-bottom: 2rem;
+  }
+  
+  .about-illustration,
+  .hero-illustration {
+    margin-top: 2rem;
+  }
+  
+  .cta-title {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: 2rem;
+  }
+  
+  .section-title {
+    font-size: 1.75rem;
+  }
+  
+  .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  
+  .hero-illustration > div,
+  .about-illustration > div {
+    width: 250px;
+    height: 250px;
+  }
+}
