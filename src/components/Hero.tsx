@@ -38,7 +38,6 @@ const Hero = () => {
                 <span>Vet-approved testing</span>
               </div>
             </div>
-            </button>
           </div>
 
           {/* Illustration */}
